@@ -1,50 +1,53 @@
-# React + TypeScript + Vite
+# Bakery Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A modern, responsive landing page for a bakery offering home delivery subscriptions. This project is a practice and showcase piece for my portfolio, built using React, TypeScript, Tailwind CSS, Lucide icons, and Framer Motion.
 
-## Expanding the ESLint configuration
+## 🚀 Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React + TypeScript** - Component-based UI development
+- **Tailwind CSS** - Utility-first styling for a sleek design
+- **Lucide Icons** - Modern icons for a refined UI
+- **Framer Motion**  - Smooth animations and transitions
 
-- Configure the top-level `parserOptions` property like this:
+## 📸 Features
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- 📌 Beautiful, responsive design
+- 📌 Hero section with video integration
+- 📌 Subscription-based pricing table
+- 📌 Customer testimonials
+- 📌 Step-by-step process showcase
+
+## 📂 Project Structure
+
+```
+/src
+ ├── components   # Reusable UI components
+ ├── assets       # Images and videos
+ ├── store        # Mock data and JSON strings
+ ├── App.tsx      # Main application file
+ ├── index.tsx    # Entry point
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🔧 Installation & Setup
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+To run this project locally:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+git clone https://https://github.com/Ramox7171/lp-bakery.git
+cd bakery-landing-page
+npm install
+npm run dev
 ```
+
+Then open `http://localhost:5173` in your browser.
+
+## 📜 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+💡 
+
