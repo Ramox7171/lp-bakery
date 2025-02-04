@@ -1,11 +1,12 @@
 import { resourcesLinks,communityLinks,platformLinks, Link } from "../store/Mock";
 import * as strings from '../store/mock.strings.json';
+import {motion} from 'framer-motion';
 
 
 const Footer = () => {
 
 
-    return <footer className="mt-20 border-t py-10 border-y-neutral-700">
+    return <motion.footer initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.5, ease: "easeOut" }} className="mt-20 border-t py-10 border-y-neutral-700">
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
             <div>
             <h3 className="text-md font-semibold mb-4">{strings.resourcesSection}</h3>
@@ -33,7 +34,7 @@ const Footer = () => {
             </div>
         </div>
 
-    </footer>
+    </motion.footer>
 };
 
 

@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { navItems } from '../store/Mock.tsx'
 import { NavItem } from '../store/Mock.tsx';
 import * as strings from '../store/mock.strings.json';
+import {motion} from 'framer-motion';
+
 
 
 
@@ -18,7 +20,7 @@ const Navbar = () => {
 
     return (
         <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80">
-            <div className="container px-4 mx-auto relative text-sm">
+            <motion.div initial={{ y: -100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5, ease: "easeOut" }} className="container px-4 mx-auto relative text-sm">
                 <div className="flex justify-between items-center">
                     <div className="flex items-center flex-shrink-0">
                         <Croissant />
@@ -27,13 +29,13 @@ const Navbar = () => {
                     <ul className="hidden lg:flex ml-14 space-x-12">
                         {navItems.map((item: NavItem, index: number) => (
                             <li key={index}>
-                                <a href={item.href}>{item.label}</a>
+                                <motion.a whileTap={{ scale: 0.95 }} transition={{ type: "spring", stiffness: 200, damping: 10 }} whileHover={{ scale: 1.1 }} href={item.href}>{item.label}</motion.a>
                             </li>
                         ))}
                     </ul>
                     <div className="hidden lg:flex justify-center space-x-12 items-center">
-                        <a href="#" className="py-2 px-3 border rounded-md">{strings.signIn}</a>
-                        <a href="#" className="bg-orange-300 py-2 px-3 rounded-md">{strings.AcCreate}</a>
+                        <motion.a whileTap={{ scale: 0.95 }} transition={{ type: "spring", stiffness: 200, damping: 10 }} whileHover={{ scale: 1.1 }} href="#" className="py-2 px-3 border rounded-md">{strings.signIn}</motion.a>
+                        <motion.a whileTap={{ scale: 0.95 }} transition={{ type: "spring", stiffness: 200, damping: 10 }} whileHover={{ scale: 1.1 }} href="#" className="bg-orange-300 py-2 px-3 rounded-md">{strings.AcCreate}</motion.a>
                     </div>
                     <div className="lg:hidden md:flex flex-col justify-end">
                         <button onClick={toggleNavbar}>
@@ -55,7 +57,7 @@ const Navbar = () => {
                         </div>
                     </div>
                 )}
-            </div>
+            </motion.div>
 
         </nav>
 

@@ -1,5 +1,6 @@
 import { Feature, features } from "../store/Mock";
 import * as strings from '../store/mock.strings.json';
+import {motion} from 'framer-motion';
 
 
 
@@ -7,7 +8,7 @@ const FeatureSection = () => {
 
 
 
-    return (<div className="relative mt-20 border-b border-neutral-800 min-h-[800px] px-20">
+    return (<motion.div initial={{ x: 100, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 0.5, ease: "easeOut" }} className="relative mt-20 border-b border-neutral-800 min-h-[800px] px-20">
         <div className="text-center">
             
             <h2 className="text-3xl sm:text-5xl lg:text-6xl mt-10 lg:mt-20 tracking-wide">
@@ -31,7 +32,7 @@ const FeatureSection = () => {
 
             ))}
         </div>
-    </div>);
+    </motion.div>);
 }
 
 
