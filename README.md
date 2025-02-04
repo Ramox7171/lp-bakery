@@ -1,4 +1,6 @@
 # Bakery Landing Page
+![image](https://github.com/user-attachments/assets/712bb18a-cc24-4ca1-9238-4a61b025f03f)
+
 
 
 
