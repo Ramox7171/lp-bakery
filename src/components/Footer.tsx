@@ -12,7 +12,7 @@ const Footer = () => {
             <h3 className="text-md font-semibold mb-4">{strings.resourcesSection}</h3>
             <ul className="space-y-2">
                 {resourcesLinks.map((link:Link,index:number)=>(
-                    <li key={index}><a className="text-neutral-950 hover:text-white" href={link.href}>{link.text}</a></li>
+                    <li key={index}><a className="text-neutral-950 hover:text-orange-400" href={link.href}>{link.text}</a></li>
                 ))}
             </ul>
             </div>
@@ -20,7 +20,7 @@ const Footer = () => {
             <h3 className="text-md font-semibold mb-4">{strings.bakerySection}</h3>
             <ul className="space-y-2">
                 {communityLinks.map((link:Link,index:number)=>(
-                    <li key={index}><a className="text-neutral-950 hover:text-white" href={link.href}>{link.text}</a></li>
+                    <li key={index}><a className="text-neutral-950 hover:text-orange-400" href={link.href}>{link.text}</a></li>
                 ))}
             </ul>
             </div>
